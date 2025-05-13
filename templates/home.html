@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Visa Approval Predictor</title>
+    
+</head>
+<body>
+    <h2>Visa Case Predictor</h2>
+    <form action="/predict" method="post">
+        <label>Continent:</label>
+        <select name="continent">
+            <option>Africa</option><option>Asia</option><option>Europe</option>
+            <option>North America</option><option>Oceania</option><option>South America</option>
+        </select><br><br>
+
+        <label>Education of Employee:</label>
+        <select name="education">
+            <option>Bachelor's</option><option>Doctorate</option>
+            <option>High School</option><option>Master's</option>
+        </select><br><br>
+
+        <label>Has Job Experience:</label>
+        <select name="experience">
+            <option>Yes</option><option>No</option>
+        </select><br><br>
+
+        <label>Requires Job Training:</label>
+        <select name="training">
+            <option>Yes</option><option>No</option>
+        </select><br><br>
+
+        <label>Number of Employees:</label>
+        <input type="number" name="num_employees" required><br><br>
+
+        <label>Year of Establishment:</label>
+        <input type="number" name="established" required><br><br>
+
+        <label>Region of Employment:</label>
+        <select name="region">
+            <option>Island</option><option>Midwest</option>
+            <option>Northeast</option><option>South</option><option>West</option>
+        </select><br><br>
+
+        <label>Prevailing Wage:</label>
+        <input type="number" step="0.01" name="wage" required><br><br>
+
+        <label>Unit of Wage:</label>
+        <select name="unit">
+            <option>Hour</option><option>Month</option><option>Week</option><option>Year</option>
+        </select><br><br>
+
+        <label>Full Time Position:</label>
+        <select name="full_time">
+            <option>Yes</option><option>No</option>
+        </select><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+</body>
+</html>
